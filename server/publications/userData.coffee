@@ -5,6 +5,7 @@ Meteor.publish 'userData', ->
 	RocketChat.models.Users.find this.userId,
 		fields:
 			name: 1
+			bio: 1
 			username: 1
 			status: 1
 			statusDefault: 1
