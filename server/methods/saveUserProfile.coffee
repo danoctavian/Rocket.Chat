@@ -19,6 +19,9 @@ Meteor.methods
 			if settings.realname?
 				Meteor.call 'setRealName', settings.realname
 
+			if settings.bio?
+				Meteor.call 'setBio', settings.bio
+
 			if settings.username?
 				Meteor.call 'setUsername', settings.username
 

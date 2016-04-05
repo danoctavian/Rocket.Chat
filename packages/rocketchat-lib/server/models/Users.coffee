@@ -195,6 +195,13 @@ RocketChat.models.Users = new class extends RocketChat.models._Base
 
 		return @update _id, update
 
+	setBio: (_id, bio) ->
+		update =
+			$set:
+				bio: bio
+
+		return @update _id, update
+
 	setAvatarOrigin: (_id, origin) ->
 		update =
 			$set:

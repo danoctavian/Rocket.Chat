@@ -5,6 +5,10 @@ Template.accountProfile.helpers
 	realname: ->
 		return Meteor.user().name
 
+	bio: ->
+		console.log("the user is " + JSON.stringify(Meteor.user()))
+		return Meteor.user().bio
+
 	username: ->
 		return Meteor.user().username
 
@@ -66,6 +70,9 @@ Template.accountProfile.onCreated ->
 		if _.trim $('#realname').val()
 			data.realname = _.trim $('#realname').val()
 
+		if _.trim $('#bio').val()
+			data.bio = _.trim $('#bio').val()
+
 		if _.trim($('#username').val()) isnt Meteor.user().username
 			if !RocketChat.settings.get("Accounts_AllowUsernameChange")
 				toastr.remove();
@@ -84,6 +91,7 @@ Template.accountProfile.onCreated ->
 			else
 				data.email = _.trim $('#email').val()
 
+		console.log("saving user data " + JSON.stringify(data))
 		Meteor.call 'saveUserProfile', data, (error, results) ->
 			if results
 				toastr.remove();

@@ -552,6 +552,7 @@
   "n_messages" : "%s messages",
   "N_new_messages" : "%s new messages",
   "Name" : "Name",
+  "Bio" : "Bio",
   "Name_cant_be_empty" : "Name can't be empty",
   "Name_of_agent" : "Name of agent",
   "Name_optional" : "Name (optional)",
