@@ -8,6 +8,7 @@
 			<div class="info">
 				<h3 title="{{username}}"><i class="status-{{status}}"></i> {{username}}</h3>
 				<p>{{name}}</p>
+				<p>{{bio}}</p>
 				{{#if utc}}<p><i class="icon-clock"></i>{{userTime}} (UTC {{utc}})</p>{{/if}}
 				{{#if hasPermission 'view-full-other-user-info'}}
 					{{#each emails}} <p><i class="icon-mail"></i> {{address}}{{#if verified}}&nbsp;<i class="icon-ok"></i>{{/if}}</p> {{/each}}
